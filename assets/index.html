@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <h1 class="display-4 text-center w-100" id="title">Crystal Guessing Game</h1>
+                    <p class=text-center id=instructions>
+                        Welcome to the crystal guessing game! Each gem before you contains a hidden value that you can
+                        add to your total by click on the gem. Your goal is to match the displayed number exactly,
+                        without going
+                        over. Acheive this, and you win! Don't go over the target number or you'll lose!
+                    </p>
+
+                </div>
+                <div class="row justify-content-center">
+
+                    <button type="start-button" class="btn btn-primary btn-lg" id="start-button">Click to
+                        Start!</button>
+                </div>
+                <br><br>
+                <h2 class="text-center">Target Number:</h2>
+                <h3 class="text-center" id="target-num">100</h3>
+                <br><br>
+                <div class="row justify-content-around" id="button-container">
+                    <button id="gem-one" class="btn btn-primary number btn-lg" value="1"><span>1</span></button>
+                    <button id="gem-two" class="btn btn-primary number btn-lg" value="2"><span>2</span></button>
+                    <button id="gem-three" class="btn btn-primary number btn-lg" value="3"><span>3</span></button>
+                    <button id="gem-four" class="btn btn-primary number btn-lg" value="4"><span>4</span></button>
+                </div>
+                <br><br>
+                <h2 class="text-center">Current Total:</h2>
+                <h3 class="text-center" id="user-score"></h3>
+                <div class="row justify-content-around">
+                    <div class="col-5">
+                        <h3 class="text-center">Wins:</h3>
+                        <h4 class="text-center" id="wins">4</h4>
+                    </div>
+                    <div class="col-5">
+                        <h3 class="text-center">Losses:</h3>
+                        <h4 class="text-center" id="losses">4</h4>
+                    </div>
+                    </row>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Bootstrap jquery/javascript links -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script src="javascript/game.js"></script>
+
+        <script>
+            // Event listeners for clicks on each of my buttons. 
+            $("#start-button").click(function () {
+                console.log("it works!")
+            });
+
+            $("#gem-one").click(function () {
+                console.log("it works!")
+            });
+
+            $("#gem-two").click(function () {
+                console.log("it works!")
+            });
+
+            $("#gem-three").click(function () {
+                console.log("it works!")
+            });
+
+            $("#gem-four").click(function () {
+                console.log("it works!")
+            });
+
+
+
+        </script>
+</body>
+
+</html>
