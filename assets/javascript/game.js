@@ -18,13 +18,17 @@ var game = {
     wins: 0,
     losses: 0,
 
-    updateScreen: function(){
-        
-     },
+    updateScreen: function () {
+        $("#target-num").text(this.targetNum);
+        $("#wins").text(this.wins);
+        $("#losses").text(this.losses);
+        $("#user-score").text(this.currentNum);
+
+    },
 
 
     gemClick: function (gem) {
-        currentNum + this.gem;
+        this.currentNum += gem;
         this.checkCondition();
         this.updateScreen();
     },
@@ -62,10 +66,15 @@ var game = {
         this.gemThree = crystalCalc();
         this.gemFour = crystalCalc();
         this.currentNum = 0;
+
+        console.log
+
+        $("#gem-one").attr("value", this.gemOne);
+        $("#gem-two").attr("value", this.gemTwo);
+        $("#gem-three").attr("value", this.gemThree);
+        $("#gem-four").attr("value", this.gemFour);
+
     },
 
-    // checkStart: function () {
-    //     console.log(game.targetNum, game.gemOne, game.gemTwo, game.gemThree, game.gemFour)
-    // },
-
 }
+
