@@ -1,1 +1,21 @@
+body {
+    background-image:url(../images/background.jpg)
+}
 
+.jumbotron{
+    padding: 0;
+    margin-top: 5vh;
+    font-family: 'Fredoka One', cursive;
+    background-color: rgb(67, 67, 68)
+}
+
+#title{
+    font-family: 'Monoton', cursive;
+    color: rgb(187, 184, 22);
+}
+
+#instructions{
+    font-family: 'Bungee', cursive;
+}
+
+/* I don't *love* the final aesthetics of this, and I was tinkering with some on click effects but couldn't seem to get them working for me. After playing around with it for a solid 90 minutes, I've decided to just let it look kinda crappy! */

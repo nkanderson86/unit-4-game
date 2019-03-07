@@ -1,7 +1,8 @@
-/* =========================================
+/* =========================================Pseudo code from the start 
 go to game 
 see instructions see 4 gems, variables 
 click a gem 
+hide instructions & start button
 update page variables 
 win conditions
 lose conditions 
@@ -18,6 +19,7 @@ var game = {
     wins: 0,
     losses: 0,
 
+    // method to update my page to reflect the numbers from the current game, as well as the running tally of wins and losses.
     updateScreen: function () {
         $("#target-num").text(this.targetNum);
         $("#wins").text(this.wins);
@@ -26,14 +28,14 @@ var game = {
 
     },
 
-
+    // method to add the value of each gem to the current number variable, update the screen, and check for a win or loss.
     gemClick: function (gem) {
         this.currentNum += gem;
         this.checkCondition();
         this.updateScreen();
     },
 
-
+    // checking for a win or a loss here, and if either is true calling a new game.
     checkCondition: function (currentNum, targetNum) {
         if (this.currentNum === this.targetNum) {
             alert("You won!");
@@ -47,8 +49,7 @@ var game = {
         }
     },
 
-    // checkWins: function () { console.log(game.targetNum, game.currentNum, game.wins, game.losses) },
-
+    // newGame method, generate the random numbers for my target number and each gem button. Sets the value of each gem button to the random number, the value attribute of that button is used to add to the total in the gemClick method.
 
     newGame: function () {
         function crystalCalc() {
@@ -66,8 +67,6 @@ var game = {
         this.gemThree = crystalCalc();
         this.gemFour = crystalCalc();
         this.currentNum = 0;
-
-        console.log
 
         $("#gem-one").attr("value", this.gemOne);
         $("#gem-two").attr("value", this.gemTwo);
